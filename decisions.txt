@@ -1,0 +1,25 @@
+Hi,
+I have attached the solution which I completed for the system, Decisions,
+
+I created Location class to wrap the logic related to locations
+
+
+1. I used Rails Api and disabled most of the rails plugins which we don't need.
+    Because we don't need those plugins.
+2. I used static token for api to restrict access. but it is configurable anytime through rails credentials.
+    Because we don't have users specific data, otherwise we can have specific token for each user through database.
+3. I used Rspec for tests which is widely used plugin it is easy to use.
+    I find it useful for writing tests as compared to other alternatives.
+4. I used Geocoder gem for searching locations with free to use api service openstreetmaps.
+    Because it is free to use without providing any information.
+
+Guideline Questions
+
+1. How do you handle configuration values? What if those values change?
+    It depends on the type of configurations, Rails preferred way for these values are Rails credentials, Other than
+    these we can use environment variables or we have configurations which needs to be updated frequently than we
+    should use database.
+
+2. What happens if we encounter an error with the third-party API integration? Will it also break our application, or are they handled accordingly?
+    Those are handled accordingly. As in this application I am using Geocoder which is acting as middle man between
+    actual apis and our application and is handling those errors as well.
